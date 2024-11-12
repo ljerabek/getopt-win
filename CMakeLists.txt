@@ -36,6 +36,8 @@ if(BUILD_SHARED_LIB)
   )
   set_target_properties(getopt_shared PROPERTIES
     OUTPUT_NAME getopt
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/shared
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/shared
     PUBLIC_HEADER src/getopt.h
     VERSION ${PROJECT_VERSION}
   )
@@ -52,6 +54,8 @@ if(BUILD_STATIC_LIB)
   )
   set_target_properties(getopt_static PROPERTIES
     OUTPUT_NAME getopt_static
+    RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/static
+    ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/static
     PUBLIC_HEADER src/getopt.h
     VERSION ${PROJECT_VERSION}
   )
